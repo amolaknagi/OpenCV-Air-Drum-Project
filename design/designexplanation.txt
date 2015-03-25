@@ -1,0 +1,74 @@
+It is no doubt that for musicians and composers reliant
+on technology and music-related software, the landscape
+of options is very limited. Among those that standout are
+options such as Finale and museScore. Unfortunately,
+musicians and composers are reliant on these software due
+to their monopoly in their market despite their clunky,
+unfriendly user interfaces. Additionally, these music 
+suites are unfriendly to novice musicians who desire more
+fun features and simpler UI. 
+
+My application SuperEditor aims to solve this issue. SuperEditor
+is a fun, simple music-related program that allows for simple,
+yet advanced music composition and input. Additionally, it includes
+a fun freeplay mode that allows for fun percussion instrumentation
+to keep novice musicians interested.
+
+The application starts up with a stupidly simple start menu. This is
+necessary as other programs such as Finale force you to endure
+numerous settings, most of which aren't related to what you're writing.
+The start screen is simple, yet beautiful thanks to Pygame graphics.
+All of my screens are stored as classes in my program. Each class 
+contains all of the draw functions for each corresponding screen, and
+I simply call each class when I want to run a certain screen and retrieve
+that screen's buttons if any.
+
+If you click on the help screen button, you are taken to a simple 
+instructions menu that provides a clear introduction of the software 
+for new users and how to utilize the software. The instructions are clear
+and prominent unlike that of other music editors which are nonexistent,
+a bad thing for a clunky user interfaces.
+
+Next is the standard staff which is the main music editor. Click on this button
+and users are taken to a simple staff setup screen with choice for a
+time signature, title, and composer. That's it. This simple process aims to 
+alleviate the struggle for novice music-writers to go through
+the long, unnecessary staff setup process for features that are almost
+always unnnecessary.
+
+Following this staff setup is the staff itself. Other music editors, especially
+Finale and museScore, have a plethora of note settings on the top of the 
+window. These settings are tiny and hard to see, and the ones that are
+mainly used take up only about 1/10 of the screen. To resolve this, I
+set up my user interface to have only 3 options clearly represented at the top 
+of the window: note type, note length, and note pitch. That's all that's
+necessary, especially for novice musicians who are just starting. This 
+allows for a much more beautiful user interface where everything is easily 
+accessible. It makes music composition seem like less of chore. The Pygame graphics
+are simple and clear to the user and allow for easy-to-use buttons for 
+settings. To input notes, all the user has to do is click on a note's location
+in the staff the note's measures and number of lines are formatted automatically
+(thanks to Pygame graphics). Then the notes are stored as tuple values in a list
+of notes. 
+
+In this staff window I have two other buttons: Play and Save. These buttons 
+allow for the user to easily playback their music in the staff and save these
+audio files. I used PyAudio to generate audio data based on specific note
+frequencies and to playback this audio when the user presses play. Additionally,
+I used the Python Wave module to retrieve this PyAudio waveData and save it
+in a wave file for the user to keep for his/herself. While, powerful, these
+functionalities are kept simple with pygame graphics.
+
+To add to this easy-to-use musicEditor, I felt it necessary to add some fun
+music features to attract more novice musicians to composition. I used 
+the openCV2 and numpy modules for image processing to track red and blue drumsticks.
+These drumsticks can allow the user to play a drumset "in the air" with Pygame
+audio playback of drumset sounds. OpenCV2 utilizes numpy for mathematical
+computations, and openCV2 uses a color threshold (in this case blue and red)
+to isolate the blue and red colors from a camera frame. Then, the module
+can determine the centerPoint of the colored region, allowing for much functionality
+for drum playing.
+
+I made SuperEditor with the hopes of allowing for music composition without
+sacricing ease-of-use or functionality and to attract novice musicians. I think
+I did just that.
